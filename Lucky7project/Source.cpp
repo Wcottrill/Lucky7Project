@@ -100,23 +100,49 @@ using namespace std;
 
 //Question 5
 
-int main()
-{
-    int n, i;
-    bool isPrime = true;
-    cout << "Please enter a positive integer good sir/madame: ";
-    cin >> n;
-    for (i = 2; i <= n / 2; ++i)
-    {
-        if (n % i == 0)
-        {
-            isPrime = false;
-            break;
-        }
+//int main()
+//{
+//    int n, i;
+//    bool isPrime = true;
+//    cout << "Please enter a positive integer good sir/madame: ";
+//    cin >> n;
+//    for (i = 2; i <= n / 2; ++i)
+//    {
+//        if (n % i == 0)
+//        {
+//            isPrime = false;
+//            break;
+//        }
+//    }
+//    if (isPrime)
+//        cout << "This is a ..... prime number";
+//    else
+//        cout << "This is ..... not a prime number";
+//    return 0;
+//}
+
+// Question 6
+int main() {
+    int i, count, sum, inputArray[500];
+    float average;
+
+    cout << " Please enter number of integers you would like to use\n";
+    cin >> count;
+
+    cout << "Enter " << count << " integers\n";
+    // Read "count" elements from user
+    for (i = 0; i < count; i++) {
+        cin >> inputArray[i];
     }
-    if (isPrime)
-        cout << "This is a ..... prime number";
-    else
-        cout << "This is ..... not a prime number";
+
+    sum = 0;
+    // Find sum of all array elements
+    for (i = 0; i < count; i++) {
+        sum += inputArray[i];
+    }
+
+    average = (float)sum / count;
+    cout << "Average = " << average;
+
     return 0;
 }
