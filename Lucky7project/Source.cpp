@@ -72,31 +72,51 @@ using namespace std;
 //}
 
 //Question 4
-int main() {
-    char string1[20];
-    int i, length;
-    int flag = 0;
+//int main() {
+//    char string1[20];
+//    int i, length;
+//    int flag = 0;
+//
+//    cout << "Enter a string: "; cin >> string1;
+//
+//    length = strlen(string1);
+//
+//    for (i = 0;i < length;i++) {
+//        if (string1[i] != string1[length - i - 1]) {
+//            flag = 1;
+//            break;
+//        }
+//    }
+//
+//    if (flag) {
+//        cout << string1 << " is not a palindrome" << endl;
+//    }
+//    else {
+//        cout << string1 << " is a palindrome" << endl;
+//    }
+//    system("pause");
+//    return 0;
+//}
 
-    cout << "Enter a string: "; cin >> string1;
+//Question 5
 
-    length = strlen(string1);
-
-    for (i = 0;i < length;i++) {
-        if (string1[i] != string1[length - i - 1]) {
-            flag = 1;
+int main()
+{
+    int n, i;
+    bool isPrime = true;
+    cout << "Please enter a positive integer good sir/madame: ";
+    cin >> n;
+    for (i = 2; i <= n / 2; ++i)
+    {
+        if (n % i == 0)
+        {
+            isPrime = false;
             break;
         }
     }
-
-    if (flag) {
-        cout << string1 << " is not a palindrome" << endl;
-    }
-    else {
-        cout << string1 << " is a palindrome" << endl;
-    }
-    system("pause");
+    if (isPrime)
+        cout << "This is a ..... prime number";
+    else
+        cout << "This is ..... not a prime number";
     return 0;
 }
-
-
-
