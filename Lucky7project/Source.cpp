@@ -58,14 +58,45 @@ using namespace std;
 //	return 0;
 //}
 
-__int64 factorial(__int64 n)
-{
-	return (n == 0 ? 1 : n * factorial(n - 1));
+//Question 3
+//__int64 factorial(__int64 n)
+//{
+//	return (n == 0 ? 1 : n * factorial(n - 1));
+//}
+//
+//int main(int argc, char* argv[])
+//{
+//	for (int n = 0; n <= 10; n++)
+//		printf("%d! = %I64d\n", n, factorial(n));
+//	return 0;
+//}
+
+//Question 4
+int main() {
+    char string1[20];
+    int i, length;
+    int flag = 0;
+
+    cout << "Enter a string: "; cin >> string1;
+
+    length = strlen(string1);
+
+    for (i = 0;i < length;i++) {
+        if (string1[i] != string1[length - i - 1]) {
+            flag = 1;
+            break;
+        }
+    }
+
+    if (flag) {
+        cout << string1 << " is not a palindrome" << endl;
+    }
+    else {
+        cout << string1 << " is a palindrome" << endl;
+    }
+    system("pause");
+    return 0;
 }
 
-int main(int argc, char* argv[])
-{
-	for (int n = 0; n <= 10; n++)
-		printf("%d! = %I64d\n", n, factorial(n));
-	return 0;
-}
+
+
