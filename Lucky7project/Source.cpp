@@ -39,21 +39,33 @@ using namespace std;
 //	return 0;
 //}
 
+//question 2
+//int calculate_sum(int a, int N){
+//	int m = N / a;
+//
+//	int sum = m * (m + 1) / 2;
+//
+//	int ans = a * sum;
+//
+//	return ans;
+//}
+//
+//int main() {
+//	int a = 7, N = 50;
+//	cout << "Sum of multiples of  "
+//		<< a << " up to " << N << " = "
+//		<< calculate_sum(a, N) << endl;
+//	return 0;
+//}
 
-int calculate_sum(int a, int N){
-	int m = N / a;
-
-	int sum = m * (m + 1) / 2;
-
-	int ans = a * sum;
-
-	return ans;
+__int64 factorial(__int64 n)
+{
+	return (n == 0 ? 1 : n * factorial(n - 1));
 }
 
-int main() {
-	int a = 7, N = 50;
-	cout << "Sum of multiples of  "
-		<< a << " up to " << N << " = "
-		<< calculate_sum(a, N) << endl;
+int main(int argc, char* argv[])
+{
+	for (int n = 0; n <= 10; n++)
+		printf("%d! = %I64d\n", n, factorial(n));
 	return 0;
 }
